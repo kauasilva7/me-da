@@ -19,13 +19,20 @@ let mobile_state = {1: { top: 1, left: 1},
                 }
 
 if (window.mobileCheck()){
-    $("#not").mouseover()
+    $("#not").mouseover(mobileHandler)
 }else{
-    $("body").mouseover(webHandler)
+    $("body").mousemove(webHandler)
 }
 
-function webHandler(event){
-    let button = $("#not").position()
+function mobileHandler(event){
+    event.precentDefault()
+    mobileState = mobileState % 4 + 1 
+    
+     $("#not").css({
+     top: '$(mobileState[mobileStte],top * 50)%',
+     left: '$(mobileState[mobileStte],left * 50)%',
+     position: 'absolute'
+     })
 
     button.right = button.left + 100
     button.botton = button.top + 28
@@ -54,7 +61,7 @@ function webHandler(event){
     function calculateAngle(mouse, center, distance){
         let sin = Math.abs(mouse.pageY - center.y) /distance
         let cos = Math.abs(mouse.pageX - center.x) /distance
-        return {sin: sin, cos: }
+        return {sin: sin, cos: cos}
     }
 
 }
