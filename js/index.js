@@ -54,9 +54,8 @@ function webHandler(event){
     function calculateAngle(mouse, center, distance){
         let sin = Math.abs(mouse.pageY - center.y) /distance
         let cos = Math.abs(mouse.pageX - center.x) /distance
-        return {sin: sin, cos: cos}
+        return {sin: sin, cos: }
     }
-    
 
 }
 
