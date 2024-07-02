@@ -7,7 +7,7 @@
 main {
 width: 100vw;
 height: 100vh;
-background-color: brown;
+background-color: rgb(207, 34, 34);
 display: flex;
 justify-content: center;
 align-items: center;
@@ -34,7 +34,7 @@ h1{
     text-transform: uppercase;
 }
 
-#not{
+#no{
     background-color: rgb(9, 255, 0);
     border: none;
     width: 80px;

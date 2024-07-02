@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botão Fujão</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
@@ -14,8 +15,8 @@
             <h1>Me da hoje?</h1>
             <img src="/assets/Ta livre hoje w.jpg" alt="Me da hoje?">
             <div class="btn-area">
-                <button id="not">Não</button>
-                <button id="yes" onclick="alertYes()">Sim</button>
+                <button class="yes" onclick="sim()"><h2>SIM</h2></button>
+                <button class="not" onclick="desvia(this)" onmouseover="desvia(this)"><h2>NÃO</h2></button>
             </div>
         </div>
     </main>
